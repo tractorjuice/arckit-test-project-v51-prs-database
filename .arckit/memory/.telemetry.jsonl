@@ -1,0 +1,12 @@
+{"ts":"2026-05-28T06:36:56.728Z","kind":"hook_duration","tool":"Bash","duration_ms":3139,"effort":"high"}
+{"ts":"2026-05-28T06:37:07.399Z","kind":"hook_duration","tool":"Bash","duration_ms":2226,"effort":"high"}
+{"ts":"2026-05-28T06:37:10.435Z","kind":"hook_duration","tool":"Read","duration_ms":3,"effort":"high"}
+{"ts":"2026-05-28T06:37:13.855Z","kind":"hook_duration","tool":"Read","duration_ms":291,"effort":"high"}
+{"ts":"2026-05-28T06:37:31.938Z","kind":"hook_duration","tool":"Write","duration_ms":74,"effort":"high"}
+{"ts":"2026-05-28T06:37:52.009Z","kind":"hook_duration","tool":"Write","duration_ms":140,"effort":"high"}
+{"ts":"2026-05-28T06:45:47.196Z","kind":"hook_duration","tool":"Write","duration_ms":50,"effort":"high"}
+{"ts":"2026-05-28T06:46:40.629Z","kind":"hook_duration","tool":"Bash","duration_ms":2600,"effort":"xhigh"}
+{"ts":"2026-05-28T06:46:41.764Z","kind":"hook_duration","tool":"Bash","duration_ms":3184,"effort":"xhigh"}
+{"ts":"2026-05-28T06:46:42.290Z","kind":"hook_duration","tool":"Bash","duration_ms":3009,"effort":"xhigh"}
+{"ts":"2026-05-28T06:47:21.933Z","kind":"hook_duration","tool":"Bash","duration_ms":1763,"effort":"xhigh"}
+{"ts":"2026-05-28T06:47:37.110Z","kind":"hook_duration","tool":"AskUserQuestion","duration_ms":1,"effort":"xhigh"}
