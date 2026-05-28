@@ -14,6 +14,10 @@ ArcKit maintains a traceability chain: Stakeholders → Goals → Requirements (
 
 - 001-prs-database: 13% essential coverage · 0% compliance readiness · 1 orphans · next: /arckit:requirements
 
+## Global artifacts
+
+- [Architecture Principles](https://raw.githubusercontent.com/tractorjuice/arckit-test-project-v51-prs-database/main/projects/000-global/ARC-000-PRIN-v1.0.md): Architecture · `ARC-000-PRIN-v1.0`.
+
 ## Projects
 
 ### Prs Database

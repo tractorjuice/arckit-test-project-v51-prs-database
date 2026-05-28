@@ -1,9 +1,9 @@
 {
-  "generated": "2026-05-28T06:46:15.286Z",
+  "generated": "2026-05-28T08:14:06.411Z",
   "repository": {
     "name": "arckit-test-project-v51-prs-database"
   },
-  "defaultDocument": "",
+  "defaultDocument": "projects/000-global/ARC-000-PRIN-v1.0.md",
   "guides": [
     {
       "path": "docs/guides/adr.md",
@@ -914,7 +914,16 @@
       "commandCount": 5
     }
   ],
-  "global": [],
+  "global": [
+    {
+      "path": "projects/000-global/ARC-000-PRIN-v1.0.md",
+      "title": "Architecture Principles",
+      "category": "Architecture",
+      "documentId": "ARC-000-PRIN-v1.0",
+      "extension": ".md",
+      "isDefault": true
+    }
+  ],
   "typeCategories": {
     "REQ": "Discovery",
     "STKE": "Discovery",
@@ -1062,6 +1071,29 @@
   ],
   "dependencyGraph": {
     "nodes": {
+      "ARC-000-PRIN-v1.0": {
+        "type": "PRIN",
+        "project": "000-global",
+        "path": "projects/000-global/ARC-000-PRIN-v1.0.md",
+        "title": "MHCLG PRS Programme — Enterprise Architecture Principles",
+        "status": "",
+        "severity": "MEDIUM",
+        "createdDate": null,
+        "lastModified": null,
+        "version": "1.0",
+        "owner": "",
+        "classification": "",
+        "vendor": null,
+        "subdir": null,
+        "controlFields": {},
+        "reqIds": [],
+        "health": {
+          "stale": false,
+          "draft": false,
+          "orphan": false,
+          "ageDays": null
+        }
+      },
       "ARC-001-STKE-v1.0": {
         "type": "STKE",
         "project": "001-prs-database",
@@ -1086,10 +1118,16 @@
         }
       }
     },
-    "edges": []
+    "edges": [
+      {
+        "from": "ARC-000-PRIN-v1.0",
+        "to": "ARC-001-STKE",
+        "type": "references"
+      }
+    ]
   },
   "projectHealth": {
-    "baseline": "2026-05-28T06:46:15.295Z",
+    "baseline": "2026-05-28T08:14:06.418Z",
     "staleThresholdDays": 90,
     "essentialTypes": [
       {
@@ -1264,7 +1302,7 @@
             "trigger": "DR-* requirements present"
           }
         ],
-        "hasGlobalPrin": false,
+        "hasGlobalPrin": true,
         "recommendations": [
           {
             "command": "/arckit:requirements",

@@ -1,0 +1,31 @@
+{
+  "generated": "2026-05-28T08:14:16.866Z",
+  "scanned": {
+    "projects": 1,
+    "artifacts": 1
+  },
+  "summary": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "total": 0
+  },
+  "byType": {
+    "STALE-RSCH": 0,
+    "FORGOTTEN-ADR": 0,
+    "UNRESOLVED-COND": 0,
+    "STALE-EXT": 0,
+    "ORPHAN-REQ": 0,
+    "MISSING-TRACE": 0,
+    "VERSION-DRIFT": 0,
+    "REVIEW-OVERDUE": 0,
+    "STALE-DRAFT": 0
+  },
+  "projects": [
+    {
+      "id": "001-prs-database",
+      "artifacts": 1,
+      "findings": []
+    }
+  ]
+}
