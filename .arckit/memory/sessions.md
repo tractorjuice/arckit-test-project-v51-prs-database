@@ -2,6 +2,15 @@
 
 Automated session summaries captured by the ArcKit session-learner hook.
 
+### 2026-05-28 08:33 — general
+
+- **Effort:** xhigh
+- **Commits:** 1 | **Files changed:** 5
+- **Artifacts:** none detected
+- **Summary:**
+  - docs: rewrite CLAUDE.md to reflect current artifacts and hook behaviour
+- **Telemetry:** 6 tool calls (p50=1514ms, p95=3461ms)
+
 ### 2026-05-28 08:30 — discovery
 
 - **Effort:** xhigh
@@ -40,6 +49,7 @@ Automated session summaries captured by the ArcKit session-learner hook.
 - **Artifacts:** none detected
 - **Summary:**
   - Initial project setup with ArcKit v5.4.0
+
 
 
 
