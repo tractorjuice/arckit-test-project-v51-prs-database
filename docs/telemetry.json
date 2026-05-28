@@ -1,6 +1,29 @@
 {
-  "generated": "2026-05-28T08:15:36.535Z",
+  "generated": "2026-05-28T08:30:39.076Z",
   "sessions": [
+    {
+      "ts": "2026-05-28T08:30:39.076Z",
+      "type": "discovery",
+      "isFailure": false,
+      "commits": 1,
+      "filesChanged": 7,
+      "artifacts": [
+        {
+          "project": "001",
+          "categories": {
+            "Discovery": [
+              "Requirements"
+            ]
+          }
+        }
+      ],
+      "effort": "xhigh",
+      "telemetry": {
+        "toolCalls": 4,
+        "p50": 1396,
+        "p95": 3846
+      }
+    },
     {
       "ts": "2026-05-28T08:15:36.535Z",
       "type": "architecture",

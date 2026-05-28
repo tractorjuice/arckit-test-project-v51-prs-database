@@ -2,6 +2,16 @@
 
 Automated session summaries captured by the ArcKit session-learner hook.
 
+### 2026-05-28 08:30 — discovery
+
+- **Effort:** xhigh
+- **Commits:** 1 | **Files changed:** 7
+- **Artifacts:**
+  - [001] Discovery: Requirements
+- **Summary:**
+  - feat(001-prs-database): add requirements with stakeholder + principles traceability
+- **Telemetry:** 4 tool calls (p50=1396ms, p95=3846ms)
+
 ### 2026-05-28 08:15 — architecture
 
 - **Effort:** xhigh
@@ -30,6 +40,7 @@ Automated session summaries captured by the ArcKit session-learner hook.
 - **Artifacts:** none detected
 - **Summary:**
   - Initial project setup with ArcKit v5.4.0
+
 
 
 
