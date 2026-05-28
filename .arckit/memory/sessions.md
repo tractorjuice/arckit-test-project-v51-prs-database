@@ -2,6 +2,16 @@
 
 Automated session summaries captured by the ArcKit session-learner hook.
 
+### 2026-05-28 08:15 — architecture
+
+- **Effort:** xhigh
+- **Commits:** 1 | **Files changed:** 8
+- **Artifacts:**
+  - [000] Architecture: Architecture Principles
+- **Summary:**
+  - feat(000-global): add architecture principles + refresh pages/health
+- **Telemetry:** 4 tool calls (p50=1851ms, p95=3973ms)
+
 ### 2026-05-28 06:48 — discovery
 
 - **Effort:** xhigh
@@ -20,5 +30,6 @@ Automated session summaries captured by the ArcKit session-learner hook.
 - **Artifacts:** none detected
 - **Summary:**
   - Initial project setup with ArcKit v5.4.0
+
 
 

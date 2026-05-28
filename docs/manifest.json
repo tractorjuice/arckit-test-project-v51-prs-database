@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-28T08:14:06.411Z",
+  "generated": "2026-05-28T08:24:41.774Z",
   "repository": {
     "name": "arckit-test-project-v51-prs-database"
   },
@@ -1060,6 +1060,13 @@
       "name": "Prs Database",
       "documents": [
         {
+          "path": "projects/001-prs-database/ARC-001-REQ-v1.0.md",
+          "title": "Requirements",
+          "category": "Discovery",
+          "documentId": "ARC-001-REQ-v1.0",
+          "extension": ".md"
+        },
+        {
           "path": "projects/001-prs-database/ARC-001-STKE-v1.0.md",
           "title": "Stakeholder Analysis",
           "category": "Discovery",
@@ -1094,6 +1101,108 @@
           "ageDays": null
         }
       },
+      "ARC-001-REQ-v1.0": {
+        "type": "REQ",
+        "project": "001-prs-database",
+        "path": "projects/001-prs-database/ARC-001-REQ-v1.0.md",
+        "title": "Project Requirements: PRS Database",
+        "status": "",
+        "severity": "LOW",
+        "createdDate": null,
+        "lastModified": null,
+        "version": "1.0",
+        "owner": "",
+        "classification": "",
+        "vendor": null,
+        "subdir": null,
+        "controlFields": {
+          "Total": "**TBC**"
+        },
+        "reqIds": [
+          "BR-001",
+          "BR-002",
+          "BR-003",
+          "BR-004",
+          "BR-005",
+          "BR-006",
+          "BR-007",
+          "BR-008",
+          "FR-001",
+          "INT-001",
+          "FR-002",
+          "INT-002",
+          "FR-003",
+          "INT-003",
+          "FR-004",
+          "FR-005",
+          "INT-004",
+          "FR-006",
+          "NFR-C-005",
+          "FR-007",
+          "NFR-SEC-002",
+          "FR-008",
+          "NFR-SEC-006",
+          "NFR-P-001",
+          "FR-009",
+          "FR-010",
+          "NFR-I-001",
+          "NFR-I-002",
+          "FR-011",
+          "INT-006",
+          "FR-012",
+          "INT-007",
+          "FR-013",
+          "INT-005",
+          "FR-014",
+          "NFR-C-001",
+          "FR-015",
+          "NFR-M-001",
+          "FR-016",
+          "FR-017",
+          "FR-018",
+          "FR-019",
+          "FR-020",
+          "NFR-C-004",
+          "NFR-P-002",
+          "NFR-A-001",
+          "NFR-A-002",
+          "NFR-A-003",
+          "NFR-S-001",
+          "NFR-S-002",
+          "NFR-SEC-001",
+          "NFR-SEC-003",
+          "NFR-SEC-004",
+          "NFR-SEC-005",
+          "NFR-SEC-007",
+          "NFR-SEC-008",
+          "NFR-C-002",
+          "NFR-C-003",
+          "NFR-C-006",
+          "NFR-U-001",
+          "NFR-U-002",
+          "NFR-U-003",
+          "NFR-M-002",
+          "NFR-M-003",
+          "NFR-I-003",
+          "INT-008",
+          "DR-001",
+          "DR-002",
+          "DR-003",
+          "DR-004",
+          "DR-005",
+          "DR-006",
+          "DR-007",
+          "DR-008",
+          "DR-009",
+          "DR-010"
+        ],
+        "health": {
+          "stale": false,
+          "draft": false,
+          "orphan": false,
+          "ageDays": null
+        }
+      },
       "ARC-001-STKE-v1.0": {
         "type": "STKE",
         "project": "001-prs-database",
@@ -1113,7 +1222,7 @@
         "health": {
           "stale": false,
           "draft": false,
-          "orphan": true,
+          "orphan": false,
           "ageDays": null
         }
       }
@@ -1123,11 +1232,21 @@
         "from": "ARC-000-PRIN-v1.0",
         "to": "ARC-001-STKE",
         "type": "references"
+      },
+      {
+        "from": "ARC-001-REQ-v1.0",
+        "to": "ARC-001-STKE",
+        "type": "references"
+      },
+      {
+        "from": "ARC-001-REQ-v1.0",
+        "to": "ARC-000-PRIN",
+        "type": "references"
       }
     ]
   },
   "projectHealth": {
-    "baseline": "2026-05-28T08:14:06.418Z",
+    "baseline": "2026-05-28T08:24:41.781Z",
     "staleThresholdDays": 90,
     "essentialTypes": [
       {
@@ -1197,20 +1316,15 @@
       {
         "project": "001-prs-database",
         "projectId": "001",
-        "artifactCount": 1,
-        "edgeCount": 0,
-        "density": 0,
+        "artifactCount": 2,
+        "edgeCount": 2,
+        "density": 1,
         "coverage": {
           "essentialPresent": [
+            "REQ",
             "STKE"
           ],
           "essentialMissing": [
-            {
-              "type": "REQ",
-              "command": "/arckit:requirements",
-              "label": "Requirements",
-              "tier": 1
-            },
             {
               "type": "RISK",
               "command": "/arckit:risk",
@@ -1248,12 +1362,13 @@
               "tier": 4
             }
           ],
-          "essentialPct": 13,
+          "essentialPct": 25,
           "presentTypes": [
+            "REQ",
             "STKE"
           ],
           "presentByCategory": {
-            "Discovery": 1
+            "Discovery": 2
           }
         },
         "compliance": {
@@ -1278,7 +1393,7 @@
         "health": {
           "stale": 0,
           "draft": 0,
-          "orphan": 1
+          "orphan": 0
         },
         "contextualSuggestions": [
           {
@@ -1305,13 +1420,6 @@
         "hasGlobalPrin": true,
         "recommendations": [
           {
-            "command": "/arckit:requirements",
-            "label": "Requirements",
-            "type": "REQ",
-            "tier": 1,
-            "reason": "Tier 1 essential missing"
-          },
-          {
             "command": "/arckit:risk",
             "label": "Risk Register",
             "type": "RISK",
@@ -1324,6 +1432,13 @@
             "type": "SOBC",
             "tier": 2,
             "reason": "Tier 2 essential missing"
+          },
+          {
+            "command": "/arckit:adr",
+            "label": "Architecture Decision Record",
+            "type": "ADR",
+            "tier": 3,
+            "reason": "Tier 3 essential missing"
           }
         ]
       }

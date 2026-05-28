@@ -12,7 +12,7 @@ ArcKit maintains a traceability chain: Stakeholders → Goals → Requirements (
 
 ## Project status
 
-- 001-prs-database: 13% essential coverage · 0% compliance readiness · 1 orphans · next: /arckit:requirements
+- 001-prs-database: 25% essential coverage · 0% compliance readiness · next: /arckit:risk
 
 ## Global artifacts
 
@@ -22,6 +22,7 @@ ArcKit maintains a traceability chain: Stakeholders → Goals → Requirements (
 
 ### Prs Database
 
+- [Requirements](https://raw.githubusercontent.com/tractorjuice/arckit-test-project-v51-prs-database/main/projects/001-prs-database/ARC-001-REQ-v1.0.md): Discovery · `ARC-001-REQ-v1.0`.
 - [Stakeholder Analysis](https://raw.githubusercontent.com/tractorjuice/arckit-test-project-v51-prs-database/main/projects/001-prs-database/ARC-001-STKE-v1.0.md): Discovery · `ARC-001-STKE-v1.0`.
 
 ## ArcKit guides
