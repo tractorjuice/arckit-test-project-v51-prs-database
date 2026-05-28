@@ -71,8 +71,22 @@ This project uses the ArcKit plugin which provides 71 slash commands for archite
 
 ## Links
 
+### Primary sources
+
 - [Renters' Rights Act 2025 (legislation.gov.uk)](https://www.legislation.gov.uk/ukpga/2025/26/contents)
-- [MHCLG implementation roadmap](https://mhclgmedia.blog.gov.uk/)
-- [House of Commons Library briefing (CBP-10669)](https://commonslibrary.parliament.uk/research-briefings/cbp-10669/)
+- [House of Commons Library briefing — Renters' reform: what's happening and when (CBP-10669)](https://commonslibrary.parliament.uk/research-briefings/cbp-10669/)
+- [MHCLG: Historic Renters' Rights Act now protecting millions (May 2026)](https://mhclgmedia.blog.gov.uk/2026/05/01/historic-renters-rights-act-now-protecting-millions-know-your-rights/)
+- [MHCLG: One month to go — know your rights (April 2026)](https://mhclgmedia.blog.gov.uk/2026/04/01/one-month-to-go-know-your-rights-before-the-renters-rights-act-kicks-in/)
+
+### Implementation analysis
+
+- [Hogan Lovells — Renters' Rights Act: Implementation roadmap now published](https://www.hoganlovells.com/en/publications/renters-rights-act-implementation-roadmap-now-published)
+- [Pinsent Masons — The Renters' Rights Act 2025: a guide for private landlords in England](https://www.pinsentmasons.com/out-law/guides/renters-rights-act-2025-guide-private-landlords-england)
+- [RICS Property Journal — Renters' Rights Act: what's happening and when?](https://ww3.rics.org/uk/en/journals/property-journal/renters-rights-act-implementation-roadmap.html)
+- [August App — PRS landlord database 2026: what it is and how to register](https://www.augustapp.com/blog/private-rented-sector-database)
+- [Howard Morley & Sons — The Private Rented Sector Database: What is It & How Will It Work?](https://hmorley.co.uk/private-rented-sector-database/)
+
+### ArcKit
+
 - [ArcKit Documentation](https://tractorjuice.github.io/arc-kit/)
 - [ArcKit Repository](https://github.com/tractorjuice/arc-kit)
