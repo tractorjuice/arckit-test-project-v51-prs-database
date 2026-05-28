@@ -5,6 +5,15 @@ Automated session summaries captured by the ArcKit session-learner hook.
 ### 2026-05-28 08:33 — general
 
 - **Effort:** xhigh
+- **Commits:** 1 | **Files changed:** 4
+- **Artifacts:** none detected
+- **Summary:**
+  - chore: refresh arckit memory and telemetry
+- **Telemetry:** 2 tool calls (p50=3344ms, p95=3344ms)
+
+### 2026-05-28 08:33 — general
+
+- **Effort:** xhigh
 - **Commits:** 1 | **Files changed:** 5
 - **Artifacts:** none detected
 - **Summary:**
@@ -49,6 +58,7 @@ Automated session summaries captured by the ArcKit session-learner hook.
 - **Artifacts:** none detected
 - **Summary:**
   - Initial project setup with ArcKit v5.4.0
+
 
 
 
