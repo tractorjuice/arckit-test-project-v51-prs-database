@@ -2,7 +2,7 @@
 
 > **Guide Origin**: Community | **ArcKit Version**: [VERSION]
 
-`/arckit.ca-ola` generates an Official Languages Act review for a federal digital service. It builds a service surface inventory across every user-facing channel, scores Parts IV (services), V (language of work), and VI (federal language obligations) of the *Official Languages Act* (R.S.C., 1985, c. 31 (4th Supp.)), captures the active-offer mechanism per surface, runs an equivalent-quality assessment to surface "translation lag" risk, documents the Translation Bureau pipeline, and acknowledges OQLF *Charter of the French Language* considerations where the service has Quebec exposure.
+`/arckit:ca-ola` generates an Official Languages Act review for a federal digital service. It builds a service surface inventory across every user-facing channel, scores Parts IV (services), V (language of work), and VI (federal language obligations) of the *Official Languages Act* (R.S.C., 1985, c. 31 (4th Supp.)), captures the active-offer mechanism per surface, runs an equivalent-quality assessment to surface "translation lag" risk, documents the Translation Bureau pipeline, and acknowledges OQLF *Charter of the French Language* considerations where the service has Quebec exposure.
 
 The Act was substantively amended by *An Act for the Substantive Equality of Canada's Official Languages* (S.C. 2023, c. 15) — Bill C-13. The amendments expand the *Air Canada Public Participation Act*, sharpen federal-undertaking employer rules, and reinforce Part VII positive measures. Several provisions are still phasing in via Order in Council, so cite the consolidated post-2023 text and track outstanding commencements at every refresh. Treat this artefact as a delivery and governance gate — Part IV obligations attach to public-facing surfaces, Part V to internal tooling in designated bilingual regions, and Part VI to staffing impact wherever the system supports HR or staffing decisions.
 
@@ -13,7 +13,7 @@ The Act was substantively amended by *An Act for the Substantive Equality of Can
 | Artefact | Purpose |
 |----------|---------|
 | Requirements (`ARC-<id>-REQ-v1.0.md`) | Service description, user populations, surfaces in scope |
-| Service assessment (`ARC-<id>-SAS-v1.0.md`) | Bilingualism evidence and active-offer posture |
+| Service assessment (`ARC-<id>-SVCASS-v*.md`) | Bilingualism evidence and active-offer posture |
 | FITAA assessment (`ARC-<id>-FITAA-v1.0.md`) | Any public register triggers Part IV bilingual obligations |
 
 ---
@@ -21,7 +21,7 @@ The Act was substantively amended by *An Act for the Substantive Equality of Can
 ## Command
 
 ```bash
-/arckit.ca-ola <project ID or service description>
+/arckit:ca-ola <project ID or service description>
 ```
 
 Output: `projects/<id>/ARC-<id>-OLA-v1.0.md`

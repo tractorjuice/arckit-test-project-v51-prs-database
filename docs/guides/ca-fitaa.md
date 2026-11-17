@@ -2,7 +2,7 @@
 
 > **Guide Origin**: Community | **ArcKit Version**: [VERSION]
 
-`/arckit.ca-fitaa` generates a Canada Foreign Influence Transparency and Accountability Act (FITAA) compliance assessment under Bill C-70 (2024). It scopes registrable activity, designs the public-vs-protected arrangement register, lays out the registration workflow and severance rules, captures the Commissioner liaison protocol, and surfaces a Charter §2 risk register.
+`/arckit:ca-fitaa` generates a Canada Foreign Influence Transparency and Accountability Act (FITAA) compliance assessment under Bill C-70 (2024). It scopes registrable activity, designs the public-vs-protected arrangement register, lays out the registration workflow and severance rules, captures the Commissioner liaison protocol, and surfaces a Charter §2 risk register.
 
 The Office of the Commissioner of Foreign Influence Transparency is newly stood up. Regulations are still being made through 2025–2026, so this command treats unsettled section numbers and offence references as `<TBC at draft time>` placeholders that the reviewer must reconcile against the consolidated Justice Laws Website text before relying on the output.
 
@@ -14,15 +14,17 @@ The Office of the Commissioner of Foreign Influence Transparency is newly stood 
 |----------|---------|
 | Requirements (`ARC-<id>-REQ-v1.0.md`) | Activity description and arrangement triggers |
 | Stakeholders (`ARC-<id>-STKE-v1.0.md`) | Foreign principals, registrants, civil-society stakeholders |
-| Data requirements (`ARC-<id>-DR-v1.0.md`) | Register data fields, public vs protected flags |
-| Data model (`ARC-<id>-DMOD-v1.0.md`) | Arrangement / registrant / foreign-principal entities |
+| Data requirements (`DR-*` in `ARC-<id>-REQ-v*.md`) | Register data fields, public vs protected flags |
+| Data model (`ARC-<id>-DATA-v*.md`) | Arrangement / registrant / foreign-principal entities |
+
+The privacy and access artefacts are not inputs: this command does not read the PIA, the ATIP reconciliation or the AIA. They still apply to the register. The PIA must be complete before the system collects or processes registrant or foreign-principal personal data, `/arckit:ca-atip` holds the formal severance design for the public and protected views, and `/arckit:ca-aia` is needed if registration triage uses any automated decision-making, scoring or risk classification. The `ca-federal-fitaa` build recipe runs this command straight after the data model, alongside the PIA.
 
 ---
 
 ## Command
 
 ```bash
-/arckit.ca-fitaa <project ID or service description>
+/arckit:ca-fitaa <project ID or service description>
 ```
 
 Output: `projects/<id>/ARC-<id>-FITAA-v1.0.md`
@@ -70,9 +72,8 @@ Output: `projects/<id>/ARC-<id>-FITAA-v1.0.md`
 ## Handoffs
 
 - **`ca-charter`** — Charter §2 expression and association analysis is required for any registration scheme that engages protected speech or association. Treat as unconditional after FITAA.
-- **`ca-pia`** — Privacy Impact Assessment for personal information collected during arrangement registration. Required before the system collects or processes registrant or foreign-principal personal data.
-- **`ca-atip`** — Reconciles the public-facing register against the protected investigative dataset; required severance design for hybrid public / protected views.
-- **`ca-aia`** — Algorithmic Impact Assessment is triggered when registration triage uses any automated decision-making, scoring, or risk classification.
+- **`ca-soia`** — When classified material (PROTECTED C / SECRET / TOP SECRET) is in scope. The protected investigative dataset overlaps with Special Operational Information, and the RCMP / CSIS coordination touchpoints in the Commissioner Liaison Protocol are set out in the handling plan, which reads this assessment.
+- **`ca-ola`** — The public register, registration forms, acknowledgements and notices trigger Official Languages Act Part IV obligations. The OLA review reads this assessment.
 
 ---
 
