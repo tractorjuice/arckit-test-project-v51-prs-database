@@ -2,9 +2,9 @@
 
 > **Guide Origin**: Community | **ArcKit Version**: [VERSION]
 
-`/arckit.au-ism-controls` generates a Statement of Applicability against the Australian Signals Directorate's Information Security Manual (ISM). It scopes the system, surveys the 17 ISM control domains for in-scope controls, scores each control's implementation posture with evidence, captures the residual risk, and surfaces the IRAP-assessable posture (Information Security Registered Assessors Program — the Australian government's cloud-inheritance and external-assessment programme).
+`/arckit:au-ism-controls` generates a Statement of Applicability against the Australian Signals Directorate's Information Security Manual (ISM). It scopes the system, surveys the ISM's 23 cyber security guidelines for in-scope controls, scores each control's implementation posture with evidence, captures the residual risk, and surfaces the IRAP-assessable posture (Information Security Registered Assessors Program — the Australian government's cloud-inheritance and external-assessment programme).
 
-The ISM is the authoritative control library for Australian Federal entities and DISP suppliers. The SoA is the gate artefact for IRAP assessment, security accreditation, and PSPF Outcome 4 (Information Security).
+The ISM is the authoritative control library for Australian Federal entities and DISP suppliers. The SoA is the gate artefact for IRAP assessment, security accreditation, and the PSPF Technology domain (which requires the ISM to be applied).
 
 ---
 
@@ -13,16 +13,16 @@ The ISM is the authoritative control library for Australian Federal entities and
 | Artefact | Purpose |
 |----------|---------|
 | Requirements (`ARC-<id>-REQ-v1.0.md`) | Service description, hosting model, data flows |
-| Data model (`ARC-<id>-DMOD-v1.0.md`) | Sensitivity categories driving control intensity |
-| `/arckit.au-e8-posture` output (`ARC-<id>-AUE8-v1.0.md`) | Cyber baseline that the ISM SoA cross-references |
-| HLD (`ARC-<id>-HLD-v1.0.md`) | Architecture, identity model, key management |
+| Data model (`ARC-<id>-DATA-v*.md`) | Sensitivity categories driving control intensity |
+| `/arckit:au-e8-posture` output (`ARC-<id>-AUE8-v1.0.md`) | Cyber baseline that the ISM SoA cross-references |
+| Vendor HLD (`vendors/*/hld-v*.md`) | Architecture, identity model, key management |
 
 ---
 
 ## Command
 
 ```bash
-/arckit.au-ism-controls <project ID or service description>
+/arckit:au-ism-controls <project ID or service description>
 ```
 
 Output: `projects/<id>/ARC-<id>-AUISM-v1.0.md`
@@ -35,21 +35,24 @@ Output: `projects/<id>/ARC-<id>-AUISM-v1.0.md`
 |---------|----------|
 | Document Control | Australian classification (UNOFFICIAL / OFFICIAL / OFFICIAL:Sensitive / PROTECTED / SECRET / TOP SECRET) |
 | Revision History | Version, date, author, changes, approvals |
-| Executive Summary | Coverage, gaps, IRAP readiness, accreditation posture |
-| System Scope | Description, owner, classification ceiling, hosting environments |
-| Domain-by-Domain Analysis | All 17 ISM control domains: applicability, implementation posture, evidence, gaps |
-| Control Inheritance | Inherited controls from underlying cloud or platform (cite IRAP assessment letters where relied on) |
-| Residual Risk Statement | Risks accepted, escalation path, treatment commitments |
-| IRAP Posture | Whether the system is IRAP-assessable, target assessment date, scope boundary |
-| Accreditation Strategy | Internal accreditation route or cross-jurisdictional accreditation (Cyber-Hub, etc.) |
-| Maintenance Cadence | Re-assessment frequency, change triggers, ISM update tracking (ASD publishes quarterly) |
+| Executive Summary | System, classification, ISM edition used, overall applicability posture, key gaps, IRAP and DISP position |
+| System Context | System name, classification, deployment model, IRAP status and scope, DISP membership, ISM edition used, sovereignty, assessment date, assessor |
+| Guideline Applicability Matrix | All 23 ISM guidelines: applies, implementation status, notes |
+| Per-Guideline Control Applicability Assessment | For each in-scope guideline: applies, implementation, applicable ISM control IDs, evidence, gaps, remediation, compensating controls |
+| ISM-to-E8 Cross-Reference | Which ISM guidelines each Essential Eight strategy maps to |
+| Compliance Summary | Per-guideline applicable, implemented and gap counts; overall applicability score (implemented / applicable) |
+| IRAP Assessment Position | IRAP status and scope, accepted residual risks, re-assessment cadence, cloud provider inheritance |
+| Recommendations | Quick Wins / Short-Term / Medium-Term, each with ISM control IDs and guideline |
+| ArcKit Evidence Integration | Diagram, DFD, data model, ServiceNow, risk, traceability, graph-report and maturity-model evidence |
+| External References | Document register (ISM edition), citations, unreferenced documents, verification dates |
+| Visual Evidence Decision Rule | When a companion diagram is drawn, drafted with `Pending Input` labels, or recorded as a visual evidence gap |
 
 ---
 
 ## Regulatory Anchors
 
-- **ASD Information Security Manual (ISM)** — 17 control domains; quarterly-updated control library
-- **PSPF Outcome 4 (Information Security)** — federal accountability framework that cites the ISM as authoritative
+- **ASD Information Security Manual (ISM)** — cyber security principles and 23 cyber security guidelines (September 2026 release); updated quarterly
+- **PSPF Technology domain** — the federal protective security policy requires the ISM's cyber security principles and controls to be applied across the technology lifecycle
 - **IRAP (Information Security Registered Assessors Program)** — primary external-assessment route, especially for cloud inheritance
 - **Cyber Security Act 2024 (Cth)** — incident reporting obligations relevant to security incidents tracked against ISM controls
 - **PGPA Act 2013 s16** — federal accountable-authority duties
@@ -75,4 +78,4 @@ Output: `projects/<id>/ARC-<id>-AUISM-v1.0.md`
 
 ## Handoff
 
-Foundational input to `/arckit.au-disp-attestation` (DISP Information & Cyber domain draws heavily from the ISM SoA), `/arckit.au-pspf` (PSPF Outcome 4 cites ISM SoA evidence), and feeds the IRAP assessor scoping package.
+Foundational input to `/arckit:au-disp-attestation` (DISP Information & Cyber domain draws heavily from the ISM SoA), `/arckit:au-pspf` (the PSPF Technology domain cites ISM SoA evidence), and feeds the IRAP assessor scoping package.

@@ -2,7 +2,7 @@
 
 > **Guide Origin**: Community | **ArcKit Version**: [VERSION]
 
-`/arckit.ca-cloud-residency` generates a sovereign cloud residency assessment for a Canadian federal information system. The artefact reconciles the system-level Protected categorisation with the *Government of Canada Cloud Adoption Strategy* and the TBS *Direction on the Secure Use of Commercial Cloud Services*, then produces a sovereign-options matrix across AWS Canada, Azure Canada, and Google Cloud Canada. It records the foreign-government access exposure (US CLOUD Act, FISA-702 / EO-12333 reach for US-incorporated CSPs), captures the SSC cloud-brokering inheritance picture, and documents the exit and portability plan with a published dry-run cadence.
+`/arckit:ca-cloud-residency` generates a sovereign cloud residency assessment for a Canadian federal information system. The artefact reconciles the system-level Protected categorisation with the *Government of Canada Cloud Adoption Strategy* and the TBS *Direction on the Secure Use of Commercial Cloud Services*, then produces a sovereign-options matrix across AWS Canada, Azure Canada, and Google Cloud Canada. It records the foreign-government access exposure (US CLOUD Act, FISA-702 / EO-12333 reach for US-incorporated CSPs), captures the SSC cloud-brokering inheritance picture, and documents the exit and portability plan with a published dry-run cadence.
 
 The Protected B threshold is the load-bearing line in this artefact. At Protected B and above the *Direction on the Secure Use of Commercial Cloud Services* tightens the residency envelope, and the choice of region, sub-processor inventory, encryption-key custody, and identity trust root all become assurance-relevant. The assessment is rationale-driven: every sovereign-option choice and every CLOUD-Act risk acceptance must be named, justified, and approved — sovereignty is a posture, not a checkbox.
 
@@ -16,14 +16,17 @@ This command does not replace the formal cloud authorisation packages (CSP-level
 |----------|---------|
 | Requirements (`ARC-<id>-REQ-v1.0.md`) | NFR-AVL availability targets, NFR-LOC residency requirements, NFR-SEC data-handling expectations |
 | ITSG-33 SoA (`ARC-<id>-ITSG-v1.0.md`) | System-level categorisation and chosen control profile (PBMM-Cloud, Secret-High) — drives the residency envelope |
-| Data requirements (`ARC-<id>-DR-v1.0.md`) | Per-element sensitivity, including any Indigenous-data or personal-information flags |
+| Data model (`ARC-<id>-DATA-v*.md`) | Per-element sensitivity, including any Indigenous-data flags from `ca-ocap` |
+| Privacy Impact Assessment (`ARC-<id>-PIA-v1.0.md`) | Personal-information residency drivers |
+
+The cloud control-profile selection (PBMM-Cloud for the typical federal Protected B cloud-hosted baseline; Secret-High for higher-categorised workloads) is grounded in the ITSG-33 categorisation, so run `/arckit:ca-itsg-33` first where possible. Where this assessment is run first to inform a cloud decision, hand the categorisation forward to the SoA and reconcile both artefacts at the same review: SoA tailoring decisions (key custody, network segmentation, audit retention) often have direct cloud-residency implications.
 
 ---
 
 ## Command
 
 ```bash
-/arckit.ca-cloud-residency <project ID or service description>
+/arckit:ca-cloud-residency <project ID or service description>
 ```
 
 Output: `projects/<id>/ARC-<id>-CACR-v1.0.md`
@@ -80,7 +83,7 @@ The Shared Responsibility Matrix (within Operational Topology) crosswalks every 
 ## Handoffs
 
 - **`adr`** — Sovereign-cloud option choices (which region, which CSP, which encryption-key custody model) and CLOUD-Act risk acceptances are material architectural decisions. Each warrants an ADR with options analysed, the chosen path justified, and the named accepter recorded against the residual risk.
-- **`ca-itsg-33`** — The cloud control-profile selection (PBMM-Cloud for the typical federal Protected B cloud-hosted baseline; Secret-High for higher-categorised workloads) is grounded in the ITSG-33 categorisation. Run `ca-itsg-33` before this assessment where possible — the categorisation flows in. Where this assessment is run first to inform a cloud decision, hand the categorisation forward to the SoA and reconcile both artefacts at the same review. Tailoring decisions in the SoA (key-custody parameters, network-segmentation parameters, audit retention) often have direct cloud-residency implications and should be revisited together.
+- **`ca-pspc`** — Where cloud is in scope of the procurement, the federal procurement strategy reads this artefact's sub-processor analysis, residency envelope and CSP shortlist.
 
 ---
 

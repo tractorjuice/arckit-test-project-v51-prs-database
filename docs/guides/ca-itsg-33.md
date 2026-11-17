@@ -2,7 +2,7 @@
 
 > **Guide Origin**: Community | **ArcKit Version**: [VERSION]
 
-`/arckit.ca-itsg-33` generates an ITSG-33 Statement of Applicability for a Canadian federal information system. ITSG-33 is the *IT Security Risk Management: A Lifecycle Approach* publication issued by the Communications Security Establishment / Canadian Centre for Cyber Security and is the federal baseline for security control selection. The artefact this command produces walks through information-asset categorisation, control-profile selection, per-family applicability, cryptographic module validation, supply-chain screening, continuous monitoring, and the authorisation chain.
+`/arckit:ca-itsg-33` generates an ITSG-33 Statement of Applicability for a Canadian federal information system. ITSG-33 is the *IT Security Risk Management: A Lifecycle Approach* publication issued by the Communications Security Establishment / Canadian Centre for Cyber Security and is the federal baseline for security control selection. The artefact this command produces walks through information-asset categorisation, control-profile selection, per-family applicability, cryptographic module validation, supply-chain screening, continuous monitoring, and the authorisation chain.
 
 The TBS *Standard on Security Categorization* sits upstream of ITSG-33 — it is the source of the injury-based Confidentiality / Integrity / Availability scoring matrix that produces the system-level categorisation (UNCLASSIFIED / Protected A / Protected B / Protected C / CONFIDENTIAL / SECRET / TOP SECRET). The categorisation drives every downstream choice, so the categorisation section is the load-bearing part of the artefact: get it wrong and the chosen control profile, the tailoring envelope, and the authorisation cycle all propagate the error.
 
@@ -13,16 +13,16 @@ The TBS *Standard on Security Categorization* sits upstream of ITSG-33 — it is
 | Artefact | Purpose |
 |----------|---------|
 | Requirements (`ARC-<id>-REQ-v1.0.md`) | Functional context and NFR-SEC-* security requirements |
-| Data requirements (`ARC-<id>-DR-v1.0.md`) | Per-element sensitivity classifications feeding categorisation |
+| Data model (`ARC-<id>-DATA-v*.md`) | Per-element sensitivity classifications feeding categorisation |
 | Privacy Impact Assessment (`ARC-<id>-PIA-v1.0.md`) | Personal-information drivers for the categorisation, especially Confidentiality scoring |
-| Statement of Initial Authority (`ARC-<id>-SOIA-v1.0.md`, if classified) | Classified-information envelope and lawful-handling chain |
+| *Foreign Interference and Security of Information Act* handling plan (`ARC-<id>-SOIA-v1.0.md`, if classified) | Classified-information envelope and lawful-handling chain |
 
 ---
 
 ## Command
 
 ```bash
-/arckit.ca-itsg-33 <project ID or service description>
+/arckit:ca-itsg-33 <project ID or service description>
 ```
 
 Output: `projects/<id>/ARC-<id>-ITSG-v1.0.md`
